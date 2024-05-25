@@ -1,0 +1,5 @@
+export * from './Addresses'
+export * from './Gallery'
+export * from './Offers'
+export * from './Reviews'
+export * from './Videosection'

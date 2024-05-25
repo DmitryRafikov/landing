@@ -1,0 +1,12 @@
+@import "../vars/vars";
+
+.navbar {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 25px calc(10vw - 1rem);
+  padding: 15px calc(5vw - 0.5rem);
+  border-radius: 1rem;
+}
