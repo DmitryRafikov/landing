@@ -13,44 +13,47 @@ const NavBar = () => {
         }
     }, [])
 
+    const _offset = 0
+    const _duration = 500
+
     return(
         <nav className={'navbar'}>
             <Link
-                to="test1"
+                to="gallery"
                 spy={true}
                 smooth={true}
-                offset={50}
-                duration={500}
+                offset={_offset}
+                duration={_duration}
                 className={"link"}
             >
                 Фото и видео
             </Link>
             <Link
-                to="test1"
+                to="offers"
                 spy={true}
                 smooth={true}
-                offset={50}
-                duration={500}
+                offset={_offset}
+                duration={_duration}
                 className={"link"}
             >
                 Услуги
             </Link>
             <Link
-                to="test1"
+                to="addresses"
                 spy={true}
                 smooth={true}
-                offset={50}
-                duration={500}
+                offset={_offset}
+                duration={_duration}
                 className={"link"}
             >
                 Адреса
             </Link>
             <Link
-                to="test1"
+                to="reviews"
                 spy={true}
                 smooth={true}
-                offset={50}
-                duration={500}
+                offset={_offset+100}
+                duration={_duration}
                 className={"link"}
             >
                 Отзывы

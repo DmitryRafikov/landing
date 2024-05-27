@@ -1,28 +1,37 @@
-import ReviewCard from "../components/ReviewCard";
+import "react-multi-carousel/lib/styles.css";
+import ReviewCarouselCard from "../components/ReviewCarouselCard";
+import { data } from "../utils/data";
+import Carousel from "../components/carousel/Carousel";
 
 const Reviews = () => {
+    const reviews = data.reviews
+
     return(
         <div className={"reviews"}>
             <div className="reviews-main">
                 <h1>Прочитайте отзывы <br/><span>наших клиентов</span></h1>
-                <div className="reviews_layout-cards">
-                    <ReviewCard
-                        reviewerName={"Влад Кочетов"}
-                        review={"Очень доволен предоставленными услугами! Фотографии высокого качества захватили все важные моменты. Видеосъемка оказалась на высшем уровне, эмоции переданы точно. Профессионализм и творческий подход команды порадовали. Спасибо за незабываемые воспоминания!" +
-                            "Очень доволен предоставленными услугами! Фотографии высокого качества захватили все важные моменты. Видеосъемка оказалась на высшем уровне, эмоции переданы точно. Профессионализм и творческий подход команды порадовали. Спасибо за незабываемые воспоминания!"}
-                        score={10}
-                    />
-                    <ReviewCard
-                        reviewerName={"Влад Кочетов"}
-                        review={"Очень доволен предоставленными услугами! Фотографии высокого качества захватили все важные моменты. Видеосъемка оказалась на высшем уровне, эмоции переданы точно. Профессионализм и творческий подход команды порадовали. Спасибо за незабываемые воспоминания!"}
-                        score={10}
-                    />
-                    <ReviewCard
-                        reviewerName={"Влад Кочетов"}
-                        review={"Очень доволен предоставленными услугами! Фотографии высокого качества захватили все важные моменты. Видеосъемка оказалась на высшем уровне, эмоции переданы точно. Профессионализм и творческий подход команды порадовали. Спасибо за незабываемые воспоминания!"}
-                        score={10}
-                    />
-                </div>
+                <Carousel
+                    swipeable={false}
+                    autoPlay={true}
+                    infiniteMode={true}
+
+                    autoPlayDuration={10000}
+                    className={"reviews_layout-cards"}
+                >
+                    {
+                        reviews.map((review, index) => {
+                            return (
+                                <ReviewCarouselCard 
+                                    reviewerPhoto={review.reviewerPhoto}
+                                    reviewerName={review.reviewerName}
+                                    review={review.text}
+                                    score={review.score}
+                                    key={index}
+                                />
+                            )
+                        })
+                    }
+                </Carousel>
             </div>
         </div>
     )

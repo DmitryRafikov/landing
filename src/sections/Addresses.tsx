@@ -33,6 +33,7 @@ const Addresses = () => {
                                     )
                                 })
                             }
+                            
                         </ul>
                     </div>
                     <div className={"addresses-main-layout"}>
@@ -57,7 +58,10 @@ const Addresses = () => {
                     </div>
                 </div>
                 <div className={"addresses-aside"}>
-                    <YandexMap/>
+                    <YandexMap 
+                        y = {services[currentService].addresses[currentAddress as number].coordinateX}
+                        x = {services[currentService].addresses[currentAddress as number].coordinateY}
+                    />
                 </div>
             </div>
             <button className={"button__black"}>Забронировать</button>

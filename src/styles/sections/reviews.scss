@@ -1,11 +1,11 @@
 @import '../mixins';
-
+@import '../vars/vars';
 .reviews{
   background: #FFF;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   @include padding-vertical(100px);
 }
 .reviews-main{
@@ -16,33 +16,63 @@
   h1{
     margin-bottom: 50px;
   }
+  .arrow-default {
+    pointer-events: all;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .reviews_layout-cards{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-}
-.reviews_card{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: #E6EDF8;
-  border-radius: 2rem;
-  padding: 2rem;
-  margin-right: 1.25rem;
-  margin-bottom: 1.25rem;
-  width: 400px;
-  max-width: 30vw;
-  max-height: 60vh;
-}
-.reviews_card-text{
-  overflow-y:scroll;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+  justify-content: center;
+  align-items: center;
+
+  .reviews_card{
+    
+    $diameter: clamp(100px, 50%, 280px);
+    $diameter-half: clamp(100px /2, 50%/2, 280px/2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-bg-color);
+    border-radius: 2rem;
+    padding: 2rem;
+    margin-top: clamp(100px /4, 50%/4, 280px/4);
+    margin-right: 1.25rem;
+    margin-bottom: 1.25rem;
+    overflow: visible;
+    width: 400px;
+    max-width: 30vw;
+    max-height: 60vh;
+    align-items: center;
+    
+    padding-top: $diameter-half;
+  
+    .reviews_carousel-card__reviewer-photo {
+      height: clamp(100px, 70%, 280px);
+      position: absolute;
+      top: clamp(-100px, -50%, -280px);
+      img{
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .reviews_card-text{
+      margin-top: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    
+    .reviews_card-score {
+      display: flex;
+      flex-direction: row;
+    }
+   
+  }
 }
 
-.reviews_card-score {
-  display: flex;
-  flex-direction: row;
-  align-self: flex-start;
-}

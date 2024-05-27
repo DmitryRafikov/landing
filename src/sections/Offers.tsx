@@ -1,5 +1,5 @@
 import * as React from 'react'
-import OfferCard from './OfferCard'
+import OfferCard from '../components/OfferCard'
 import { useAppSelector, useAppDispatch } from '../store/hooks'
 import { selection } from '../store/reducers/service.slice'
 import {data} from '../utils/data'

@@ -7,24 +7,14 @@ export const data = {
             "coverURL":"./assets/photos/grid__1.JPG",
             "addresses":[
                 {
-                    "name":"service1",
-                    "coordinate":"1000, 2000"
+                    "name":"Жемчужина11",
+                    "coordinateX":43.469589,
+                    "coordinateY":39.893542
                 },
                 {
-                    "name":"service1",
-                    "coordinate":"1000, 2000"
-                },
-                {
-                    "name":"service1",
-                    "coordinate":"1000, 2000"
-                },
-                {
-                    "name":"service1",
-                    "coordinate":"1000, 2000"
-                },
-                {
-                    "name":"service1",
-                    "coordinate":"1000, 2000"
+                    "name":"Жемчужина",
+                    "coordinateX":43.568548,
+                    "coordinateY":39.731566
                 },
             ]
         },
@@ -35,32 +25,14 @@ export const data = {
             "coverURL":"./assets/photos",
             "addresses":[
                 {
-                    "name":"service2",
-                    "coordinate":"1000, 2000"
+                    "name":"Жемчужина11",
+                    "coordinateX":43.469589,
+                    "coordinateY":39.893542
                 },
                 {
-                    "name":"service2",
-                    "coordinate":"1000, 2000"
-                },
-                {
-                    "name":"service2",
-                    "coordinate":"1000, 2000"
-                },
-                {
-                    "name":"service2",
-                    "coordinate":"1000, 2000"
-                },
-                {
-                    "name":"service2",
-                    "coordinate":"1000, 2000"
-                },
-                {
-                    "name":"service2",
-                    "coordinate":"1000, 2000"
-                },
-                {
-                    "name":"service2",
-                    "coordinate":"1000, 2000"
+                    "name":"Жемчужина",
+                    "coordinateX":43.568548,
+                    "coordinateY":39.731566
                 },
             ]
         },
@@ -71,27 +43,38 @@ export const data = {
             "coverURL":"./assets/photos",
             "addresses":[
                 {
-                    "name":"service3",
-                    "coordinate":"1000, 2000"
+                    "name":"Жемчужина11",
+                    "coordinateX":43.469589,
+                    "coordinateY":39.893542
                 },
                 {
-                    "name":"service3",
-                    "coordinate":"1000, 2000"
-                },
-                {
-                    "name":"service3",
-                    "coordinate":"1000, 2000"
-                },
-                {
-                    "name":"service3",
-                    "coordinate":"1000, 2000"
-                },
-
-                {
-                    "name":"service3",
-                    "coordinate":"1000, 2000"
+                    "name":"Жемчужина",
+                    "coordinateX":43.568548,
+                    "coordinateY":39.731566
                 },
             ]
+        }
+    ],
+    "reviews":[
+        {
+            reviewerPhoto:"./assets/photos/profiles/Vlad.jpg",
+            reviewerName:"Влад Кочетов",
+            text:"Круто!",
+            score:10
+        },
+        {
+            
+            reviewerPhoto:"./assets/photos/profiles/Kate.jpg",
+            reviewerName:"Катерина Кочетова",
+            text:"УЛЕТТТТТТ!",
+            score:10
+        },
+        {
+            
+            reviewerPhoto:"./assets/photos/profiles/Ank.jpg",
+            reviewerName:"Блатной Дядя",
+            text:"GHJCNJ HFP]T,!!!!!",
+            score:10
         }
     ]
 }

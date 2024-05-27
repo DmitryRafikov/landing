@@ -1,0 +1,98 @@
+.carousel {
+    position: relative;
+    width: 100%;
+  
+    &Inner {
+      display: flex;
+      white-space: nowrap;
+    }
+  
+    .carouselItem {
+      display: inline-block;
+      width: 100%;
+      flex: 0 0 100%;
+    }
+  
+    .arrows {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+
+      &.INSIDE_UP {
+        top: 10px;
+      }
+  
+      &.INSIDE_MIDDLE {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+  
+      &.INSIDE_DOWN {
+        bottom: 10px;
+      }
+  
+      &.OUTSIDE_UP {
+        top: -40px;
+      }
+  
+      &.OUTSIDE_MIDDLE {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+  
+      &.OUTSIDE_DOWN {
+        bottom: -40px;
+      }
+    
+      & > div {
+        pointer-events: all;
+      }
+     
+    }
+    
+  
+    .pagination {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+  
+      &.INSIDE_UP {
+        top: 10px;
+      }
+  
+      &.INSIDE_DOWN {
+        bottom: 10px;
+      }
+  
+      &.OUTSIDE_UP {
+        top: -30px;
+      }
+  
+      &.OUTSIDE_DOWN {
+        bottom: -30px;
+      }
+  
+      .dot {
+        margin: 0 5px;
+        cursor: pointer;
+  
+        &.active {          
+            background: black;
+            
+        border-radius: 50%;
+        }
+      }
+  
+      .defaultDot {
+        width: 10px;
+        height: 10px;
+        border: 2px solid black;
+        border-radius: 50%;
+      }
+
+    }
+  }
+  

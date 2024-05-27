@@ -8,17 +8,16 @@ import Offers from './sections/Offers'
 import Addresses from "./sections/Addresses";
 import Reviews from "./sections/Reviews";
 import Videosection from './sections/Videosection';
-import YandexMap from './components/addresses-section/YaMaps';
+import GalleryNew from './sections/GalleryNew';
 function App() {
   return (
     <div className="App">
         <NavBar/>
-        <Gallery/>
+        <GalleryNew/>
         <Videosection/> 
         <Offers/>
         <Addresses/>
         <Reviews/>
-        <YandexMap/>
     </div>
   );
 }

@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import storiesUrls from "../utils/gallery-stories";
-import {Story} from "react-insta-stories/dist/interfaces";
 
-function StoriesGenerator(): Story[] {
+function StoriesGenerator()  {
   useEffect(() => {
     //document.querySelector("story")!.parentElement!.style.overflow = "visible !important";
     const box = document.querySelector('.story') as HTMLDivElement | null;
@@ -17,7 +16,7 @@ function StoriesGenerator(): Story[] {
     
   }, []);
   return storiesUrls.map((url) => ({
-    content: (props) => {
+    content: () => {
       return(
       <div className={"story"} style={{overflow: "visible !important"}}>
         <img src={url} alt="Story" />

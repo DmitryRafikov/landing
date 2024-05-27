@@ -1,7 +1,10 @@
-import Stories from 'react-insta-stories'
 import StoriesGenerator from '../components/StoriesGenerator'
-
+import Carousel from '../components/carousel/Carousel'
+import storiesUrls from "../utils/gallery-stories";
+import { ArrowPosition, PaginationPosition } from '../components/carousel/types';
+import StoryTimer from '../components/StoryTimer';
 const GalleryNew = () => {
+    const _duration = 5000;
     return(
         <section className={"gallery"}>
             <div className="gallery-photosection">
@@ -23,23 +26,18 @@ const GalleryNew = () => {
                 </div>
                 <div className="gallery-photos">
                     <div className="gallery-photos__photo-container">
-                        <Stories
-                            storyContainerStyles={
-                                {
-                                    background: "transparent",
-                                    overflow: "visible",
-                                    maxHeight:"100%",
-                                    position:"relative"
-                                }
-                            }
-                            storyStyles={
-                                {
-                                    overflow: "visible",
-                                }
-                            }
-                            stories={StoriesGenerator()}
-                        />
-                        
+                        <Carousel
+                            paginationPosition={PaginationPosition.INSIDE_UP}
+                            customPagination={<StoryTimer duration={_duration} />}
+                            autoPlay={true}
+                            autoPlayDuration={_duration}
+                        >
+                            {storiesUrls.map((url, index) => (
+                                <div className={"story"} key={index}>
+                                    <img src={url} alt="Story" />
+                                </div>
+                            ))}
+                        </Carousel>
                         <button className={"button__white"}>
                             Посмотреть еще
                         </button>

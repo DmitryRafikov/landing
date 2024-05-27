@@ -34,7 +34,7 @@
 }
 .gallery-photos{
   position: absolute;
-  right: 15%;
+  right: -5%;
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -93,6 +93,19 @@
       max-height: 2rem;
       margin-bottom: 10px;
     }
+  }
+
+}
+
+.story-pagination{
+  width: 100px;
+  height:5px;
+  background-color: rgb(204, 204, 204);
+  border-radius: 1px;
+  .story-pagination-filler{
+    background-color: white;
+    width:0;
+    height: 100%;
   }
 }
 
