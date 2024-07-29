@@ -48,7 +48,10 @@
     
       & > div {
         pointer-events: all;
+       
       }
+
+       
      
     }
     
@@ -94,5 +97,9 @@
       }
 
     }
+
+    
   }
-  
+  .arrow-default {
+    width: clamp(40px, 10vw, 100px);
+  }

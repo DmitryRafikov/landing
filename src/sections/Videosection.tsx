@@ -1,43 +1,27 @@
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
+import styles from '../styles/sections/videosection.module.scss';
 
 const Videosection = () => {
-    return(
-        <section className={"videosection"}>
-            <div className={"videosection-header"}>
-                <h1>Незабываемые моменты</h1>
-            </div>
-            <div className="videosection-player">
-                <ReactPlayer
-                    className={"videosection-player__player"}
-                    playing={true}
-                    muted={true}
-                    width={"60vw"}
-                    height={"auto"}
-                    url={"./assets/video/sozdaniepaceta.day2.mp4"}
-                />
-                 <div className="videosection-figure">
-                    <img src="./assets/figures/video-figure.svg" alt="" />
-                </div>
-            </div>
-           
-        </section>
-    )
-}
+  return (
+    <section className={styles.videosection}>
+      <div className={styles.videosection__header}>
+        <h1>Незабываемые моменты</h1>
+      </div>
+      <div className={styles.videosection__playerWrapper}>
+        <ReactPlayer
+          className={styles.videosection__player}
+          playing={true}
+          muted={true}
+          width="60vw"
+          height="auto"
+          url="./assets/video/sozdaniepaceta.day2.mp4"
+        />
+        <div className={styles.videosection__figure}>
+          <img src="./assets/figures/video-figure.svg" alt="Геометрическая фигура" />
+        </div>
+      </div>
+    </section>
+  );
+};
 
-const VideosectionAlternative = () => {
-    return(
-        <section className={"videosection"}>
-            <div className={"videosection-header"}>
-                <h1>Посмотрите, как <span>Вы проведете время</span></h1>
-            </div>
-            <div className="videosection-player">
-
-            </div>
-            <div className="videosection-figure">
-                <img src="./assets/figures/video-figure.svg" alt="" />
-            </div>
-        </section>
-    )
-}
-
-export default Videosection
+export default Videosection;

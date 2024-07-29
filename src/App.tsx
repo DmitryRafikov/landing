@@ -9,6 +9,8 @@ import Addresses from "./sections/Addresses";
 import Reviews from "./sections/Reviews";
 import Videosection from './sections/Videosection';
 import GalleryNew from './sections/GalleryNew';
+import { Modal } from './components/modal'
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +20,7 @@ function App() {
         <Offers/>
         <Addresses/>
         <Reviews/>
+        <Modal/>
     </div>
   );
 }

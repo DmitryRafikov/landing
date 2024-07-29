@@ -1,5 +1,5 @@
 import { Link } from "react-scroll"
-
+import styles from '../styles/sections/offers.module.scss'
 type Props = {
     header: string,
     description: string,
@@ -8,19 +8,18 @@ type Props = {
 
 const OfferCard = ({header, description, cost}: Props) => {
     return(
-        <div className={"offers-cards_info"}>
+        <div className={styles.offersCard}>
             <h3>{header}</h3>
             <p>{description}</p>
-            <span className={"offers-cards_info_cost"}>Стоимость: {cost}</span>
-            <div className="offers-cards_info_buttons">
-                <button className={"button__black"}><span>Забронировать</span></button>
+            <span className={styles.offersCard__cost}>Стоимость: {cost}</span>
+            <div className={styles.offersCard__controls}>
+            <button className={`button__black ${styles.book__button}`}><span>Забронировать</span></button>
                 <Link
                     to="addresses"
                     spy={true}
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className={"offers-cards__addresses-button"}
                 >
                     <button>Посмотреть адреса</button>
                 </Link>

@@ -3,11 +3,25 @@
 @import "sections/index.scss";
 @import "mixins";
 
+html, body{
+
+  overflow-x: hidden;
+}
+
 body{
   font-size: 1.5rem;
   font-family: 'Roboto', "Helvetica Neue", "Arial", sans-serif;
   background-color: var(--main-bg-color);
-  overflow-x: hidden;
+
+}
+.root{
+  position: relative;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1{

@@ -1,5 +1,5 @@
-import * as React from 'react'
 import OfferCard from '../components/OfferCard'
+import styles from '../styles/sections/offers.module.scss'
 import { useAppSelector, useAppDispatch } from '../store/hooks'
 import { selection } from '../store/reducers/service.slice'
 import {data} from '../utils/data'
@@ -8,37 +8,35 @@ const Offers = () => {
     const dispatch = useAppDispatch()
     const services = data.services
     return(
-        <section className={"offers"}>
+        <section className={styles.offers}>
             <h1>Какие услуги <br/>мы предоставляем?</h1>
-            <div className={"offers_selection"}>
-                <button 
-                    className={"button__transparent"}
-                    onClick={() => dispatch(selection(0))}
-                >
-                        Полет на парашюте
-                </button>
-                <button 
-                    className={"button__transparent"}
-                    onClick={() => dispatch(selection(1))}
-                >
-                        Дельфин тур
-                </button>
-                <button 
-                    className={"button__transparent"}
-                    onClick={() => dispatch(selection(2))}
-                >
-                        Рыбалка в открытом море
-                </button>
+            <div className={styles.offers__navigation}>
+                {
+                    services.map((service: any, index: number) => {
+                        return (
+                            <button
+                                key={index}
+                                className={"button__transparent"}
+                                onClick={() => dispatch(selection(index))}
+                            >
+                                {service.name}
+                            </button>
+                        )
+                    })
+                }
             </div>
-            <div className={"offers-cards"}>
+            <div className={styles.offers__offersWrapper}>
                 <OfferCard
                     header={services[currentService].name}
                     description={services[currentService].description}
                     cost={services[currentService].cost}
                 />
-                <div className={"offers-cards_photo"}>
+                <div className={styles.offers__photo}>
                     <img src={services[currentService].coverURL} alt=""/>
                 </div>
+            </div>
+            <div className={styles.offers__figure}>
+                <img src="./assets/figures/offers.svg" alt="" />
             </div>
         </section>
     )

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
-
-
+import {useAppDispatch} from '../store/hooks';
+import {open} from '../store/reducers/modal.slice'
 const NavBar = () => {
     useEffect(() => {
         // Updating scrollSpy when the component mounts.
@@ -12,7 +12,7 @@ const NavBar = () => {
             Events.scrollEvent.remove('end')
         }
     }, [])
-
+    const dispatch = useAppDispatch()
     const _offset = 0
     const _duration = 500
 
@@ -58,7 +58,7 @@ const NavBar = () => {
             >
                 Отзывы
             </Link>
-            <button>
+            <button onClick={()=>dispatch(open())}>
                 Забронировать
             </button>
         </nav>

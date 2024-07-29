@@ -1,10 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { serviceSlice } from './reducers/service.slice'
-
+import { modalSlice } from "./reducers/modal.slice";
 
 const store = configureStore({
   reducer: {
-    service: serviceSlice.reducer
+    service: serviceSlice.reducer,
+    modal: modalSlice.reducer
   },
 })
 

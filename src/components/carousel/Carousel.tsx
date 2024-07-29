@@ -103,16 +103,30 @@ const Carousel: React.FC<CarouselProps> = ({
 
 const DefaultLeftArrow = () => {
   return(
-    <div className='arrow-default'>
-      <img src="./assets/icons/arrow left.svg" alt="" />
+    <div >
+      <img 
+        style={{
+          minWidth:"40px",
+          width:"10vw",
+          maxWidth:"100px"
+        }}
+        className={"arrow-default"} src="./assets/icons/arrow left.svg" alt="" 
+      />
     </div>
   )
 }
 
 const DefaultRightArrow = () => {
   return(
-    <div className='arrow-default'>
-      <img src="./assets/icons/arrow right.svg" alt="" />
+    <div>
+      <img
+        style={{
+          minWidth:"40px",
+          width:"10vw",
+          maxWidth:"100px"
+        }}
+        className={"arrow-default"} src="./assets/icons/arrow right.svg" alt="" 
+      />
     </div>
   )
 }
