@@ -1,0 +1,99 @@
+@import "../mixins";
+
+.offers {
+  @include flex(column, center, flex-start);
+  padding: 50px calc(10vw - 1rem);
+  position: relative;
+  &__navigation{
+    display: flex;
+    flex-direction: row;
+    @include margin-vertical(50px);
+    @media screen and (max-width: 500px) {
+      justify-content: space-around;
+      flex-wrap: wrap;
+      @include margin-vertical(1rem)
+    }
+    button{
+      margin-right: 1rem;
+      @media screen and (max-width: 500px) {
+        margin-right: 0;
+      }
+    }
+  }
+  &__offersWrapper{
+    @include flex(row, space-between, flex-start);
+    width: 100%;    
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+    }
+  }
+  &__photo{
+    position: relative;
+    @include flex-center(row);
+    border-radius: 1rem;
+    overflow: hidden;
+
+    width: 60%;
+    max-height: 70vh;
+    @media screen and (max-width:900px) {
+      width: 50%
+    }
+    @media screen and (max-width:500px) {
+      width: 100%;
+      height: 30vh;
+    }
+    img{
+      width:100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__figure{
+    position: absolute;
+    top:0;
+    right: 0;
+  }
+}
+
+.offersCard{
+  background-color: white;
+  max-width: 30%;
+  height: fit-content;
+  @include flex(column, flex-start, space-between);
+  text-align: start;
+  border-radius: 1rem;
+  padding: 2rem;
+  @media screen and (max-width:900px) {
+    max-width: 50%;
+  }
+  @media screen and (max-width:500px) {
+    max-width: 100%;
+    width: 100%;
+    @include flex(column, center, center);
+    padding:1rem 0;
+    margin-bottom: 1rem;
+  }
+  &__cost{
+    font-weight: 700;
+    font-size: 1.75rem;
+    @include margin-vertical(1.75rem);
+  }
+
+  &__controls{
+    width: 100%;
+    @media screen and (max-width:500px) {
+      width: 70%;
+    }
+    button{
+      width: 100%;
+    }
+    .book__button{
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+  }
+  p{
+    margin-top: 1.75rem;
+  }
+
+}
